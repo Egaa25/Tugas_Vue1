@@ -12,7 +12,7 @@ body {
 /* Style untuk navbar */
 #navbar {
   display: flex;
-  margin-top: 70px;
+  margin-top: 80px;
   width: 100%;
   border-radius: 20px;
   justify-content: space-between;
@@ -118,7 +118,7 @@ h1:hover {
 .card {
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 130px;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   color: #fff;
@@ -127,10 +127,15 @@ h1:hover {
   border: 2px solid black;
 }
 
+.card h2 {
+  cursor: pointer;
+}
+
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 50px;
+  border: 2px solid white;
 }
 
 /* Counter Section */
@@ -266,6 +271,16 @@ h1:hover {
 .color-btn:hover {
   transform: scale(1.2);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border: 2px solid white;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  border-radius: 20px;
+  align-items: center;
+  background-color: rgb(28, 28, 28); /* Warna background */
+  height: 30px;
 }
 </style>
 
@@ -286,9 +301,9 @@ h1:hover {
     </div>
   </nav>
   <div id="app">
-    <header>
+    <!-- <header>
       <h1>Hallo, Selamat Datang!</h1>
-    </header>
+    </header> -->
 
     <main>
       <div class="content">
@@ -334,7 +349,7 @@ h1:hover {
             </button>
           </div>
           <div class="color-options">
-            <h3>Select a Color:</h3>
+            <h3>Pilih warna:</h3>
             <div class="color-picker">
               <button
                 v-for="(color, index) in colors"
@@ -349,6 +364,7 @@ h1:hover {
       </div>
     </main>
   </div>
+  <footer></footer>
 </template>
 
 <script>
